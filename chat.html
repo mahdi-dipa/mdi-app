@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>قصر | MDI</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,500;0,600;0,700;1,500&family=Inter:wght@400;500;600;700&family=Vazirmatn:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="chat.css">
+</head>
+<body>
+  <div class="app">
+    <header class="topbar">
+      <div class="topbar-left">
+        <span class="dot"></span>
+        <div>
+          <h1>دیپا</h1>
+          <p>روح دیجیتال — قصر MDI</p>
+        </div>
+      </div>
+      <div class="topbar-right">
+        <select id="providerSelect" title="انتخاب موتور هوش مصنوعی">
+          <option value="gemini">Gemini</option>
+          <option value="deepseek">DeepSeek</option>
+          <option value="openai">OpenAI</option>
+          <option value="anthropic">Claude</option>
+        </select>
+        <button id="clearBtn" title="پاک کردن تاریخچه">🗑</button>
+        <button id="logoutBtn" title="خروج">خروج</button>
+      </div>
+    </header>
+
+    <main class="messages" id="messages"></main>
+
+    <form class="inputbar" id="chatForm">
+      <input type="text" id="chatInput" placeholder="با دیپا حرف بزن…" autocomplete="off" />
+      <button type="submit" id="sendBtn">ارسال</button>
+    </form>
+  </div>
+
+  <script src="chat.js"></script>
+</body>
+</html>

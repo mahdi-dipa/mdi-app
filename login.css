@@ -1,0 +1,89 @@
+:root {
+  --ink:    #0B1120;
+  --panel:  #131B2E;
+  --gold:   #D9A441;
+  --text:   #E7EAF0;
+  --muted:  #8A93A6;
+  --line:   #232C42;
+  --danger: #E1685E;
+  --font-display: 'Fraunces', 'Vazirmatn', serif;
+  --font-body: 'Inter', 'Vazirmatn', sans-serif;
+}
+
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: radial-gradient(circle at 30% 20%, #1A2340 0%, var(--ink) 60%);
+  font-family: var(--font-body);
+  color: var(--text);
+}
+
+.scene {
+  min-height: 100vh;
+  display: flex; align-items: center; justify-content: center;
+  padding: 24px;
+}
+
+.door-card {
+  width: 100%; max-width: 380px;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  padding: 40px 34px;
+  box-shadow: 0 30px 80px rgba(0,0,0,.45);
+}
+
+.eyebrow {
+  font-size: 12px; letter-spacing: .08em; text-transform: uppercase;
+  color: var(--gold); margin: 0 0 14px; font-weight: 600;
+}
+
+h1 {
+  font-family: var(--font-display);
+  font-size: 30px; font-weight: 600;
+  margin: 0 0 6px;
+}
+
+.sub { color: var(--muted); font-size: 14px; margin: 0 0 30px; }
+
+.field { margin-bottom: 18px; }
+.field label {
+  display: block; font-size: 12.5px; color: var(--muted);
+  margin-bottom: 7px; font-weight: 600;
+}
+.field input {
+  width: 100%;
+  background: #0E1526;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 12px 14px;
+  color: var(--text);
+  font-size: 14.5px;
+  font-family: var(--font-body);
+  outline: none;
+  transition: border-color .15s ease;
+}
+.field input:focus { border-color: var(--gold); }
+
+.error {
+  color: var(--danger);
+  font-size: 13px;
+  margin: -6px 0 16px;
+}
+
+button[type="submit"] {
+  width: 100%;
+  background: var(--gold);
+  color: #1B1408;
+  border: none;
+  border-radius: 10px;
+  padding: 13px;
+  font-weight: 700;
+  font-size: 14.5px;
+  font-family: var(--font-body);
+  cursor: pointer;
+  transition: transform .12s ease, opacity .12s ease;
+}
+button[type="submit"]:hover { transform: translateY(-1px); }
+button[type="submit"]:disabled { opacity: .6; cursor: default; transform: none; }

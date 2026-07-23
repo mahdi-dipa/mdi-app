@@ -1,0 +1,17 @@
+{
+  "name": "mdi-app",
+  "version": "0.1.0",
+  "description": "MDI — مرکز فرماندهی دیجیتال (MVP: قصر + درب مخفی)",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "seed": "node seed-user.js"
+  },
+  "dependencies": {
+    "express": "^4.19.2",
+    "express-session": "^1.18.0",
+    "better-sqlite3": "^11.3.0",
+    "bcryptjs": "^2.4.3",
+    "dotenv": "^16.4.5"
+  }
+}
